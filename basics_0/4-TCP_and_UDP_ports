@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Display all listening TCP and UDP ports
+sudo nestat -tulnp
