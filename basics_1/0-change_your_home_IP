@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script that changes the IP of your home computer
+sudo ifconfig eth0
