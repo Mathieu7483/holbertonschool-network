@@ -1,0 +1,34 @@
+1. The DNS Request: Finding the Address
+The first step is translation. Computers don't understand "https://www.google.com", they understand IP addresses (like 142.250.190.46).
+
+Browser Cache: Your browser checks if it already knows the IP.
+OS Cache & Resolver: If not, it asks your operating system, then your Internet Service Provider (ISP).
+DNS Hierarchy: A request is sent to DNS servers to find the "phone number" of the server.
+
+2. TCP/IP: Connecting the Dots
+Once the IP is found, your browser needs to establish a connection.
+
+TCP 3-way Handshake: The client (you) and the server exchange three packets (SYN, SYN-ACK, ACK) to ensure they are both ready to talk.
+IP Protocol: This ensures the packets are routed correctly across the internet.
+
+3. Firewall & HTTPS: The Security Gate
+Firewall: The request must pass through firewalls on both sides to ensure the traffic is allowed.
+SSL/TLS Handshake: Since it's HTTPS (port 443), your browser and the server perform a "handshake" to encrypt the communication using SSL certificates. No one can spy on your search!
+
+4. The Load Balancer: Distributing the Load
+Google receives billions of requests. A single server would explode.
+
+The request hits a Load Balancer (like the HAproxy we discussed earlier).
+It chooses the "healthiest" or closest available server to handle your request.
+
+5. The Web & Application Servers: Processing
+Web Server (Nginx/Apache): It receives the request and decides what to do.
+Application Server: It runs the code (Python, Go, Java) to generate the page based on who you are and what you searched for.
+Database: The application queries a database to get your profile, search history, etc.
+
+6. The Rendering: Bringing the Page to Life
+The server sends back an HTTP Response (usually with a 200 OK status code).
+
+Your browser receives HTML, CSS, and JavaScript.
+The DOM: The browser parses the HTML to build the structure.
+Rendering: It applies CSS and executes JS to display the Google search bar you know.
