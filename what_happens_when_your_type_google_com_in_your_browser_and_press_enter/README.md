@@ -39,6 +39,7 @@ The project is presented as a comprehensive blog post covering the following mil
 | File | Description |
 | --- | --- |
 | `0-blog_post` | Contains the URL to the published blog post (Medium/LinkedIn). |
+| `1-what_happen_when_diagram` | Contains the diagram to explain how it works. |
 | `README.md` | This documentation file. |
 
 ## ✍️ Author
